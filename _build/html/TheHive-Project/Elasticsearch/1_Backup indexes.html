@@ -1,0 +1,659 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Backup indexes &#8212; My Notebooks</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Restore indexes" href="2_Restore%20indexes.html" />
+    <link rel="prev" title="Welcome to your Jupyter Book" href="../../intro.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/sb.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">My Notebooks</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Welcome to your Jupyter Book
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Elasticsearch
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Backup indexes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2_Restore%20indexes.html">
+   Restore indexes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3_Migration%20index%20created%20with%20ES5%20to%20ES7.html">
+   Migration of index of TheHive and Cortex created with ES5 to ES7
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="4_Delete%20index.html">
+   Delete index
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/TheHive-Project/Elasticsearch/1_Backup indexes.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/jeromeleonard/Notebooks"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/jeromeleonard/Notebooks/issues/new?title=Issue%20on%20page%20%2FTheHive-Project/Elasticsearch/1_Backup indexes.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/jeromeleonard/Notebooks/master?urlpath=tree/docs/TheHive-Project/Elasticsearch/1_Backup indexes.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#prerequisites">
+   Prerequisites
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#list-if-any-index-exist">
+   List if any index exist
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setting-up-variables">
+   Setting up variables
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-the-snapshot-path">
+   Create the snapshot path
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#list-existing-backups">
+     List existing backups
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#backup-thehive-index">
+   Backup TheHive Index
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Setting up variables
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#snapshot-the-current-index">
+     Snapshot the current index
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#list-backups">
+     List backups
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#backup-cortex-index">
+   Backup Cortex Index
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Setting up variables
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     Snapshot the current index
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     List backups
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#list-indexes">
+     List indexes
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="backup-indexes">
+<h1>Backup indexes<a class="headerlink" href="#backup-indexes" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> 
+<span class="n">jq</span> <span class="p">(</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">stedolan</span><span class="o">.</span><span class="n">github</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">jq</span><span class="o">/</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>both are available as packages in most linux distributions.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">ES_HOST</span><span class="o">=</span><span class="s2">&quot;http://localhost:9200&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="list-if-any-index-exist">
+<h2>List if any index exist<a class="headerlink" href="#list-if-any-index-exist" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -s <span class="si">${</span><span class="nv">ES_HOST</span><span class="si">}</span>/_cat/indices<span class="se">\?</span>v
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="setting-up-variables">
+<h2>Setting up variables<a class="headerlink" href="#setting-up-variables" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">THEHIVE_INDEX</span><span class="o">=</span><span class="s2">&quot;the_hive_15&quot;</span>
+<span class="nv">CORTEX_INDEX</span><span class="o">=</span><span class="s2">&quot;cortex_4&quot;</span>
+
+<span class="nv">SNAPSHOT_PATH</span><span class="o">=</span><span class="s2">&quot;the_hive_backup&quot;</span>
+<span class="nv">BACKUP_FOLDER</span><span class="o">=</span><span class="s2">&quot;/opt/backup&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="create-the-snapshot-path">
+<h2>Create the snapshot path<a class="headerlink" href="#create-the-snapshot-path" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -XPUT  -H <span class="s1">&#39;Content-Type: application/json&#39;</span> <span class="s1">&#39;&#39;</span><span class="si">${</span><span class="nv">ES_HOST</span><span class="si">}</span><span class="s1">&#39;/_snapshot/&#39;</span><span class="si">${</span><span class="nv">SNAPSHOT_PATH</span><span class="si">}</span><span class="s1">&#39;&#39;</span> -d <span class="s1">&#39;{</span>
+<span class="s1">    &quot;type&quot;: &quot;fs&quot;,</span>
+<span class="s1">    &quot;settings&quot;: {</span>
+<span class="s1">        &quot;location&quot;: &quot;&#39;</span><span class="si">${</span><span class="nv">BACKUP_FOLDER</span><span class="si">}</span><span class="s1">&#39;&quot;,</span>
+<span class="s1">        &quot;compress&quot;: true</span>
+<span class="s1">    }}&#39;</span> <span class="p">|</span> jq
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   125  100    21  100   104   1182   5857 --:--:-- --:--:-- --:--:--  6117
+<span class=" -Color -Color-Bold">{</span>
+<span class=" -Color -Color-Bold">  </span><span class=" -Color -Color-Bold -Color-Bold-Blue">&quot;acknowledged&quot;</span><span class=" -Color -Color-Bold">: </span>true<span class=" -Color -Color-Bold"></span>
+<span class=" -Color -Color-Bold">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="list-existing-backups">
+<h3>List existing backups<a class="headerlink" href="#list-existing-backups" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -XGET  -H<span class="s1">&#39; Content-Type: application/json&#39;</span> <span class="s1">&#39;&#39;</span><span class="si">${</span><span class="nv">ES_HOST</span><span class="si">}</span><span class="s1">&#39;/_cat/snapshots/&#39;</span><span class="si">${</span><span class="nv">SNAPSHOT_PATH</span><span class="si">}</span><span class="s1">&#39;&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>snapshot_1          SUCCESS 1517236911 14:41:51 1517236925 14:42:05 13.6s 17 41 0 41
+snapshot_2          SUCCESS 1542307572 18:46:12 1542307573 18:46:13 849ms  1  5 0  5
+snapshot_20181212   SUCCESS 1544617667 12:27:47 1544617667 12:27:47 545ms  1  5 0  5
+before_demo         SUCCESS 1553003263 13:47:43 1553003265 13:47:45  2.2s  1  5 0  5
+snapshot_3          SUCCESS 1554119454 11:50:54 1554119455 11:50:55  1.6s  1  5 0  5
+snapshot_20200804_1 SUCCESS 1596548429 13:40:29 1596548429 13:40:29  22ms  0  0 0  0
+snapshot_20200804_2 SUCCESS 1596550212 14:10:12 1596550215 14:10:15    3s  1  5 0  5
+snapshot_20200304_3 SUCCESS 1599684050 20:40:50 1599684053 20:40:53  3.4s  1  5 0  5
+snapshot_20200910_3 SUCCESS 1599684068 20:41:08 1599684068 20:41:08  84ms  1  5 0  5
+snapshot_20200910_1 SUCCESS 1599684085 20:41:25 1599684085 20:41:25 117ms  1  5 0  5
+thehive_20201027-1  SUCCESS 1603821541 17:59:01 1603821542 17:59:02  1.2s  1  5 0  5
+thehive_20201027-2  SUCCESS 1603821692 18:01:32 1603821692 18:01:32  67ms  1  5 0  5
+cortex_20201027-2   SUCCESS 1603822017 18:06:57 1603822018 18:06:58  1.6s  1  5 0  5
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="backup-thehive-index">
+<h2>Backup TheHive Index<a class="headerlink" href="#backup-thehive-index" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>Setting up variables<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">THEHIVE_SNAPSHOT</span><span class="o">=</span><span class="s2">&quot;thehive_202010230-1&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="snapshot-the-current-index">
+<h3>Snapshot the current index<a class="headerlink" href="#snapshot-the-current-index" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -XPUT  -H <span class="s1">&#39;Content-Type: application/json&#39;</span> <span class="s1">&#39;&#39;</span><span class="si">${</span><span class="nv">ES_HOST</span><span class="si">}</span><span class="s1">&#39;/_snapshot/&#39;</span><span class="si">${</span><span class="nv">SNAPSHOT_PATH</span><span class="si">}</span>/<span class="si">${</span><span class="nv">THEHIVE_SNAPSHOT</span><span class="si">}</span><span class="s1">&#39;?wait_for_completion=true&#39;</span> -d <span class="s1">&#39;{</span>
+<span class="s1">    &quot;indices&quot;:&quot;&#39;</span><span class="s2">&quot;</span><span class="nv">$THEHIVE_INDEX</span><span class="s2">&quot;</span><span class="s1">&#39;&quot;</span>
+<span class="s1">    }&#39;</span><span class="p">|</span> jq
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   462  100   427  100    35   1653    135 --:--:-- --:--:-- --:--:--  1655
+<span class=" -Color -Color-Bold">{</span>
+<span class=" -Color -Color-Bold">  </span><span class=" -Color -Color-Bold -Color-Bold-Blue">&quot;snapshot&quot;</span><span class=" -Color -Color-Bold">: {</span>
+<span class=" -Color -Color-Bold">    </span><span class=" -Color -Color-Bold -Color-Bold-Blue">&quot;snapshot&quot;</span><span class=" -Color -Color-Bold">: </span><span class=" -Color -Color-Green">&quot;thehive_202010230-1&quot;</span><span class=" -Color -Color-Bold">,</span>
+<span class=" -Color -Color-Bold">    </span><span class=" -Color -Color-Bold -Color-Bold-Blue">&quot;uuid&quot;</span><span class=" -Color -Color-Bold">: </span><span class=" -Color -Color-Green">&quot;W3nSqccxTN6_BoorbfP5RQ&quot;</span><span class=" -Color -Color-Bold">,</span>
+<span class=" -Color -Color-Bold">    </span><span class=" -Color -Color-Bold -Color-Bold-Blue">&quot;version_id&quot;</span><span class=" -Color -Color-Bold">: </span>6081399<span class=" -Color -Color-Bold">,</span>
+<span class=" -Color -Color-Bold">    </span><span class=" -Color -Color-Bold -Color-Bold-Blue">&quot;version&quot;</span><span class=" -Color -Color-Bold">: </span><span class=" -Color -Color-Green">&quot;6.8.13&quot;</span><span class=" -Color -Color-Bold">,</span>
+<span class=" -Color -Color-Bold">    </span><span class=" -Color -Color-Bold -Color-Bold-Blue">&quot;indices&quot;</span><span class=" -Color -Color-Bold">: [</span>
+<span class=" -Color -Color-Bold">      </span><span class=" -Color -Color-Green">&quot;the_hive_15&quot;</span><span class=" -Color -Color-Bold"></span>
+<span class=" -Color -Color-Bold">    ],</span>
+<span class=" -Color -Color-Bold">    </span><span class=" -Color -Color-Bold -Color-Bold-Blue">&quot;include_global_state&quot;</span><span class=" -Color -Color-Bold">: </span>true<span class=" -Color -Color-Bold">,</span>
+<span class=" -Color -Color-Bold">    </span><span class=" -Color -Color-Bold -Color-Bold-Blue">&quot;state&quot;</span><span class=" -Color -Color-Bold">: </span><span class=" -Color -Color-Green">&quot;SUCCESS&quot;</span><span class=" -Color -Color-Bold">,</span>
+<span class=" -Color -Color-Bold">    </span><span class=" -Color -Color-Bold -Color-Bold-Blue">&quot;start_time&quot;</span><span class=" -Color -Color-Bold">: </span><span class=" -Color -Color-Green">&quot;2020-10-30T08:24:37.512Z&quot;</span><span class=" -Color -Color-Bold">,</span>
+<span class=" -Color -Color-Bold">    </span><span class=" -Color -Color-Bold -Color-Bold-Blue">&quot;start_time_in_millis&quot;</span><span class=" -Color -Color-Bold">: </span>1604046277512<span class=" -Color -Color-Bold">,</span>
+<span class=" -Color -Color-Bold">    </span><span class=" -Color -Color-Bold -Color-Bold-Blue">&quot;end_time&quot;</span><span class=" -Color -Color-Bold">: </span><span class=" -Color -Color-Green">&quot;2020-10-30T08:24:37.731Z&quot;</span><span class=" -Color -Color-Bold">,</span>
+<span class=" -Color -Color-Bold">    </span><span class=" -Color -Color-Bold -Color-Bold-Blue">&quot;end_time_in_millis&quot;</span><span class=" -Color -Color-Bold">: </span>1604046277731<span class=" -Color -Color-Bold">,</span>
+<span class=" -Color -Color-Bold">    </span><span class=" -Color -Color-Bold -Color-Bold-Blue">&quot;duration_in_millis&quot;</span><span class=" -Color -Color-Bold">: </span>219<span class=" -Color -Color-Bold">,</span>
+<span class=" -Color -Color-Bold">    </span><span class=" -Color -Color-Bold -Color-Bold-Blue">&quot;failures&quot;</span><span class=" -Color -Color-Bold">: [],</span>
+<span class=" -Color -Color-Bold">    </span><span class=" -Color -Color-Bold -Color-Bold-Blue">&quot;shards&quot;</span><span class=" -Color -Color-Bold">: {</span>
+<span class=" -Color -Color-Bold">      </span><span class=" -Color -Color-Bold -Color-Bold-Blue">&quot;total&quot;</span><span class=" -Color -Color-Bold">: </span>5<span class=" -Color -Color-Bold">,</span>
+<span class=" -Color -Color-Bold">      </span><span class=" -Color -Color-Bold -Color-Bold-Blue">&quot;failed&quot;</span><span class=" -Color -Color-Bold">: </span>0<span class=" -Color -Color-Bold">,</span>
+<span class=" -Color -Color-Bold">      </span><span class=" -Color -Color-Bold -Color-Bold-Blue">&quot;successful&quot;</span><span class=" -Color -Color-Bold">: </span>5<span class=" -Color -Color-Bold"></span>
+<span class=" -Color -Color-Bold">    }</span>
+<span class=" -Color -Color-Bold">  }</span>
+<span class=" -Color -Color-Bold">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="list-backups">
+<h3>List backups<a class="headerlink" href="#list-backups" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -s -XGET  -H<span class="s1">&#39; Content-Type: application/json&#39;</span> <span class="s1">&#39;&#39;</span><span class="si">${</span><span class="nv">ES_HOST</span><span class="si">}</span><span class="s1">&#39;/_cat/snapshots/&#39;</span><span class="si">${</span><span class="nv">SNAPSHOT_PATH</span><span class="si">}</span><span class="s1">&#39;&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>snapshot_1          SUCCESS 1517236911 14:41:51 1517236925 14:42:05 13.6s 17 41 0 41
+snapshot_2          SUCCESS 1542307572 18:46:12 1542307573 18:46:13 849ms  1  5 0  5
+snapshot_20181212   SUCCESS 1544617667 12:27:47 1544617667 12:27:47 545ms  1  5 0  5
+before_demo         SUCCESS 1553003263 13:47:43 1553003265 13:47:45  2.2s  1  5 0  5
+snapshot_3          SUCCESS 1554119454 11:50:54 1554119455 11:50:55  1.6s  1  5 0  5
+snapshot_20200804_1 SUCCESS 1596548429 13:40:29 1596548429 13:40:29  22ms  0  0 0  0
+snapshot_20200804_2 SUCCESS 1596550212 14:10:12 1596550215 14:10:15    3s  1  5 0  5
+snapshot_20200304_3 SUCCESS 1599684050 20:40:50 1599684053 20:40:53  3.4s  1  5 0  5
+snapshot_20200910_3 SUCCESS 1599684068 20:41:08 1599684068 20:41:08  84ms  1  5 0  5
+snapshot_20200910_1 SUCCESS 1599684085 20:41:25 1599684085 20:41:25 117ms  1  5 0  5
+thehive_20201027-1  SUCCESS 1603821541 17:59:01 1603821542 17:59:02  1.2s  1  5 0  5
+thehive_20201027-2  SUCCESS 1603821692 18:01:32 1603821692 18:01:32  67ms  1  5 0  5
+cortex_20201027-2   SUCCESS 1603822017 18:06:57 1603822018 18:06:58  1.6s  1  5 0  5
+thehive_202010230-1 SUCCESS 1604046277 08:24:37 1604046277 08:24:37 219ms  1  5 0  5
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="backup-cortex-index">
+<h2>Backup Cortex Index<a class="headerlink" href="#backup-cortex-index" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h3>Setting up variables<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">CORTEX_SNAPSHOT</span><span class="o">=</span><span class="s2">&quot;cortex_202010230-1&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id3">
+<h3>Snapshot the current index<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -XPUT  -H <span class="s1">&#39;Content-Type: application/json&#39;</span> <span class="s1">&#39;&#39;</span><span class="si">${</span><span class="nv">ES_HOST</span><span class="si">}</span><span class="s1">&#39;/_snapshot/&#39;</span><span class="si">${</span><span class="nv">SNAPSHOT_PATH</span><span class="si">}</span>/<span class="si">${</span><span class="nv">CORTEX_SNAPSHOT</span><span class="si">}</span><span class="s1">&#39;?wait_for_completion=true&#39;</span> -d <span class="s1">&#39;{</span>
+<span class="s1">    &quot;indices&quot;:&quot;&#39;</span><span class="s2">&quot;</span><span class="nv">$CORTEX_INDEX</span><span class="s2">&quot;</span><span class="s1">&#39;&quot;</span>
+<span class="s1">    }&#39;</span><span class="p">|</span> jq
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   455  100   423  100    32   1466    110 --:--:-- --:--:-- --:--:--  1468
+<span class=" -Color -Color-Bold">{</span>
+<span class=" -Color -Color-Bold">  </span><span class=" -Color -Color-Bold -Color-Bold-Blue">&quot;snapshot&quot;</span><span class=" -Color -Color-Bold">: {</span>
+<span class=" -Color -Color-Bold">    </span><span class=" -Color -Color-Bold -Color-Bold-Blue">&quot;snapshot&quot;</span><span class=" -Color -Color-Bold">: </span><span class=" -Color -Color-Green">&quot;cortex_202010230-1&quot;</span><span class=" -Color -Color-Bold">,</span>
+<span class=" -Color -Color-Bold">    </span><span class=" -Color -Color-Bold -Color-Bold-Blue">&quot;uuid&quot;</span><span class=" -Color -Color-Bold">: </span><span class=" -Color -Color-Green">&quot;ghG_VzJVQYaxqADmFOfOZQ&quot;</span><span class=" -Color -Color-Bold">,</span>
+<span class=" -Color -Color-Bold">    </span><span class=" -Color -Color-Bold -Color-Bold-Blue">&quot;version_id&quot;</span><span class=" -Color -Color-Bold">: </span>6081399<span class=" -Color -Color-Bold">,</span>
+<span class=" -Color -Color-Bold">    </span><span class=" -Color -Color-Bold -Color-Bold-Blue">&quot;version&quot;</span><span class=" -Color -Color-Bold">: </span><span class=" -Color -Color-Green">&quot;6.8.13&quot;</span><span class=" -Color -Color-Bold">,</span>
+<span class=" -Color -Color-Bold">    </span><span class=" -Color -Color-Bold -Color-Bold-Blue">&quot;indices&quot;</span><span class=" -Color -Color-Bold">: [</span>
+<span class=" -Color -Color-Bold">      </span><span class=" -Color -Color-Green">&quot;cortex_4&quot;</span><span class=" -Color -Color-Bold"></span>
+<span class=" -Color -Color-Bold">    ],</span>
+<span class=" -Color -Color-Bold">    </span><span class=" -Color -Color-Bold -Color-Bold-Blue">&quot;include_global_state&quot;</span><span class=" -Color -Color-Bold">: </span>true<span class=" -Color -Color-Bold">,</span>
+<span class=" -Color -Color-Bold">    </span><span class=" -Color -Color-Bold -Color-Bold-Blue">&quot;state&quot;</span><span class=" -Color -Color-Bold">: </span><span class=" -Color -Color-Green">&quot;SUCCESS&quot;</span><span class=" -Color -Color-Bold">,</span>
+<span class=" -Color -Color-Bold">    </span><span class=" -Color -Color-Bold -Color-Bold-Blue">&quot;start_time&quot;</span><span class=" -Color -Color-Bold">: </span><span class=" -Color -Color-Green">&quot;2020-10-30T08:25:02.378Z&quot;</span><span class=" -Color -Color-Bold">,</span>
+<span class=" -Color -Color-Bold">    </span><span class=" -Color -Color-Bold -Color-Bold-Blue">&quot;start_time_in_millis&quot;</span><span class=" -Color -Color-Bold">: </span>1604046302378<span class=" -Color -Color-Bold">,</span>
+<span class=" -Color -Color-Bold">    </span><span class=" -Color -Color-Bold -Color-Bold-Blue">&quot;end_time&quot;</span><span class=" -Color -Color-Bold">: </span><span class=" -Color -Color-Green">&quot;2020-10-30T08:25:02.638Z&quot;</span><span class=" -Color -Color-Bold">,</span>
+<span class=" -Color -Color-Bold">    </span><span class=" -Color -Color-Bold -Color-Bold-Blue">&quot;end_time_in_millis&quot;</span><span class=" -Color -Color-Bold">: </span>1604046302638<span class=" -Color -Color-Bold">,</span>
+<span class=" -Color -Color-Bold">    </span><span class=" -Color -Color-Bold -Color-Bold-Blue">&quot;duration_in_millis&quot;</span><span class=" -Color -Color-Bold">: </span>260<span class=" -Color -Color-Bold">,</span>
+<span class=" -Color -Color-Bold">    </span><span class=" -Color -Color-Bold -Color-Bold-Blue">&quot;failures&quot;</span><span class=" -Color -Color-Bold">: [],</span>
+<span class=" -Color -Color-Bold">    </span><span class=" -Color -Color-Bold -Color-Bold-Blue">&quot;shards&quot;</span><span class=" -Color -Color-Bold">: {</span>
+<span class=" -Color -Color-Bold">      </span><span class=" -Color -Color-Bold -Color-Bold-Blue">&quot;total&quot;</span><span class=" -Color -Color-Bold">: </span>5<span class=" -Color -Color-Bold">,</span>
+<span class=" -Color -Color-Bold">      </span><span class=" -Color -Color-Bold -Color-Bold-Blue">&quot;failed&quot;</span><span class=" -Color -Color-Bold">: </span>0<span class=" -Color -Color-Bold">,</span>
+<span class=" -Color -Color-Bold">      </span><span class=" -Color -Color-Bold -Color-Bold-Blue">&quot;successful&quot;</span><span class=" -Color -Color-Bold">: </span>5<span class=" -Color -Color-Bold"></span>
+<span class=" -Color -Color-Bold">    }</span>
+<span class=" -Color -Color-Bold">  }</span>
+<span class=" -Color -Color-Bold">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id4">
+<h3>List backups<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -s -XGET  -H<span class="s1">&#39; Content-Type: application/json&#39;</span> <span class="s1">&#39;&#39;</span><span class="si">${</span><span class="nv">ES_HOST</span><span class="si">}</span><span class="s1">&#39;/_cat/snapshots/&#39;</span><span class="si">${</span><span class="nv">SNAPSHOT_PATH</span><span class="si">}</span><span class="s1">&#39;&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>snapshot_1          SUCCESS 1517236911 14:41:51 1517236925 14:42:05 13.6s 17 41 0 41
+snapshot_2          SUCCESS 1542307572 18:46:12 1542307573 18:46:13 849ms  1  5 0  5
+snapshot_20181212   SUCCESS 1544617667 12:27:47 1544617667 12:27:47 545ms  1  5 0  5
+before_demo         SUCCESS 1553003263 13:47:43 1553003265 13:47:45  2.2s  1  5 0  5
+snapshot_3          SUCCESS 1554119454 11:50:54 1554119455 11:50:55  1.6s  1  5 0  5
+snapshot_20200804_1 SUCCESS 1596548429 13:40:29 1596548429 13:40:29  22ms  0  0 0  0
+snapshot_20200804_2 SUCCESS 1596550212 14:10:12 1596550215 14:10:15    3s  1  5 0  5
+snapshot_20200304_3 SUCCESS 1599684050 20:40:50 1599684053 20:40:53  3.4s  1  5 0  5
+snapshot_20200910_3 SUCCESS 1599684068 20:41:08 1599684068 20:41:08  84ms  1  5 0  5
+snapshot_20200910_1 SUCCESS 1599684085 20:41:25 1599684085 20:41:25 117ms  1  5 0  5
+thehive_20201027-1  SUCCESS 1603821541 17:59:01 1603821542 17:59:02  1.2s  1  5 0  5
+thehive_20201027-2  SUCCESS 1603821692 18:01:32 1603821692 18:01:32  67ms  1  5 0  5
+cortex_20201027-2   SUCCESS 1603822017 18:06:57 1603822018 18:06:58  1.6s  1  5 0  5
+thehive_202010230-1 SUCCESS 1604046277 08:24:37 1604046277 08:24:37 219ms  1  5 0  5
+cortex_202010230-1  SUCCESS 1604046302 08:25:02 1604046302 08:25:02 260ms  1  5 0  5
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="list-indexes">
+<h3>List indexes<a class="headerlink" href="#list-indexes" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -s <span class="si">${</span><span class="nv">ES_HOST</span><span class="si">}</span>/_cat/indices<span class="se">\?</span>v
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>health status index       uuid                   pri rep docs.count docs.deleted store.size pri.store.size
+green  open   the_hive_15 g54ZKlu0Q_yFbPxvtNF9Fg   5   0      30998           16     33.2mb         33.2mb
+green  open   cortex_4    1CGSt9R3Rlm0bc9E-qEkXg   5   0       8531            8       13mb           13mb
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "bash"
+        },
+        kernelOptions: {
+            kernelName: "bash",
+            path: "./TheHive-Project/Elasticsearch"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'bash'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../../intro.html" title="previous page">Welcome to your Jupyter Book</a>
+    <a class='right-next' id="next-link" href="2_Restore%20indexes.html" title="next page">Restore indexes</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Jérôme Leonard<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

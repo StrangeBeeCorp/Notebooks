@@ -1,0 +1,4 @@
+jupyter-book
+bash_kernel
+matplotlib
+numpy
